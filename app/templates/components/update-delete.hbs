@@ -1,0 +1,52 @@
+<div class="row">
+  <div class="col-sm-6">
+    {{#if newProductForm}}
+    <h3>New Product</h3>
+      {{new-product categories=categories saveProduct="saveProduct"}}
+    {{/if}}
+
+    {{#if updateProductForm}}
+      <h3>Update Product</h3>
+      <form>
+        <div class="form-group">
+          <label for="gamename">Name</label>
+          {{input placeholder="Title" value=gamename id="gamename" class="form-control" }}
+        </div>
+        <div class="form-group">
+          <label for="publisher">Publisher</label>
+          {{input placeholder="Publisher Name" value=publisher id="publisher" class="form-control"}}
+        </div>
+        <div class="form-group">
+          <label for="image">Image URL</label>
+          {{input placeholder="https://cf.geekdo-images.com/images/pic2582929.jpg" value=image id="image" class="form-control"}}
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          {{textarea rows=10 placeholder="Description of game" value=description id="description" class="form-control"}}
+        </div>
+        <div class="form-group">
+          <label for="price">Price</label>
+          {{input type="number" placeholder=50 value=price id="price" class="form-control" }}
+        </div>
+        <div>Category:
+        {{#x-select id="category" action="setCategoryType"}}
+          {{#each categories as |category|}}
+            {{#x-option value=category}}
+              {{category.name}}
+            {{/x-option}}
+          {{/each}}
+        {{/x-select}}
+        </div>
+      <button {{action "update"}}class="btn btn-success">Update</button>
+      </form>
+    {{/if}}
+  </div>
+  <div class="col-sm-6">
+    {{#each products as |product|}}
+      {{product.gamename}} | {{product.publisher}}
+      <button class="btn btn-danger" {{action 'updateProductForm' product}}>Update</button>
+      <button class="btn btn-warning">Delete</button>
+      <hr>
+    {{/each}}
+  </div>
+</div>

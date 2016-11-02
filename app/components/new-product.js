@@ -22,6 +22,6 @@ export default Ember.Component.extend({
     setCategoryType(value) {
       console.log(this.get("selectedCategory"));
       this.set("selectedCategory", value);
-    }
+    },
   }
 });

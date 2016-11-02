@@ -15,6 +15,14 @@ export default Ember.Route.extend({
         newProduct.save().then(function(){
           return category.save();
         });
+      },
+      update(product, params) {
+        Object.keys(params).forEach(function(key){
+          if(params[key] !== undefined) {
+            product.set(key, params[key]);
+          }
+        });
+        product.save();
       }
     }
 });
