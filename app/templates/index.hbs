@@ -1,6 +1,2 @@
-{{#each model as |category|}}
-  <div class="category-tile">
-    {{!-- {{#link-to 'category' category.id}}<h2>{{category.name}}</h2>{{/link-to}} --}}
-    <h2>{{category.name}}</h2>
-  </div>
-{{/each}}
+<h2>Game Categories</h2>
+{{category-tile categories=model}}

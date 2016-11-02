@@ -30,6 +30,9 @@ export default Ember.Component.extend({
       },
       saveProduct(params) {
         this.sendAction('saveProduct', params);
+      },
+      delete(product) {
+        this.sendAction('delete', product);
       }
     }
   });
