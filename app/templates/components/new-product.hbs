@@ -1,0 +1,33 @@
+
+<form {{action 'saveProduct' on="submit"}}>
+  <div class="form-group">
+    <label for="gamename">Name</label>
+    {{input placeholder="Title" value=gamename id="gamename" class="form-control" required="required"}}
+  </div>
+  <div class="form-group">
+    <label for="publisher">Publisher</label>
+    {{input placeholder="Publisher Name" value=publisher id="publisher" class="form-control" required="required"}}
+  </div>
+  <div class="form-group">
+    <label for="image">Image URL</label>
+    {{input placeholder="https://cf.geekdo-images.com/images/pic2582929.jpg" value=image id="image" class="form-control" required="required"}}
+  </div>
+  <div class="form-group">
+    <label for="description">Description</label>
+    {{textarea rows=10 placeholder="Description of game" value=description id="description" class="form-control" required="required"}}
+  </div>
+  <div class="form-group">
+    <label for="price">Price</label>
+    {{input type="number" placeholder=50 value=price id="price" class="form-control" required="required"}}
+  </div>
+  <div>Category:
+  {{#x-select id="category" action="setCategoryType"}}
+    {{#each categories as |category|}}
+      {{#x-option value=category}}
+        {{category.name}}
+      {{/x-option}}
+    {{/each}}
+  {{/x-select}}
+</div>
+<button class="btn btn-success">Save</button>
+</form>

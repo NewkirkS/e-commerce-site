@@ -13,6 +13,13 @@ module.exports = function(environment) {
       }
     },
 
+    firebase: {
+      apiKey: "AIzaSyAw-EjUPYhPat_5fOzyhgsmW4PYkW4SYys",
+      authDomain: "boardgame-ecommerce.firebaseapp.com",
+      databaseURL: "https://boardgame-ecommerce.firebaseio.com",
+      storageBucket: "boardgame-ecommerce.appspot.com"
+    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
