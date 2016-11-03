@@ -1,5 +1,8 @@
 {{#each categories as |category|}}
-  <div class="category-tile">
-  {{#link-to "category" category}}<h2 class="category-headers">{{category.name}}</h2>{{/link-to}}
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-4 category-tile">
+    {{#link-to "category" category}}<h2 class="category-headers">{{category.name}}</h2>{{/link-to}}
+    </div>
   </div>
+
 {{/each}}

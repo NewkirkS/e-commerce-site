@@ -44,6 +44,7 @@
   <div class="col-sm-6">
     {{#each products as |product|}}
       {{product.gamename}} | {{product.publisher}}
+      <br>
       <button class="btn btn-danger" {{action 'updateProductForm' product}}>Update</button>
       <button class="btn btn-warning" {{action 'delete' product}}>Delete</button>
       <hr>

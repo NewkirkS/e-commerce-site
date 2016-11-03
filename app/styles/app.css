@@ -10,5 +10,24 @@
 .category-headers:hover {
     color: darkgrey;
     text-decoration: underline;
-  }
+}
+
+.index-header {
+  text-align: center;
+}
+
+.game-image {
+  max-width: 300px;
+  max-height: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.product-tile {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
 }

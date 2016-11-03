@@ -1,8 +1,10 @@
 <div class="product-tile">
   <h2>{{model.gamename}} | {{model.publisher}}</h2>
+  <hr>
   <img src={{model.image}} alt={{model.gamename}}/>
   <h4>${{model.price}}</h4>
   <button class="btn"{{action "addToCart" model}}>Add to Cart</button>
+  <hr>
   <p>{{model.description}}</p>
 </div>
 <hr>
