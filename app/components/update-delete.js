@@ -13,7 +13,7 @@ export default Ember.Component.extend({
       updateProductForm(product) {
         this.set('updateProductForm', true);
         this.set('newProductForm', false);
-        this.set('currentProduct', product)
+        this.set('currentProduct', product);
       },
       update() {
         var params = {

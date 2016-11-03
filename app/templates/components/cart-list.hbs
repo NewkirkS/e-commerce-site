@@ -1,0 +1,5 @@
+{{#each shoppingCart.products as |product|}}
+  <h4>{{product.gamename}} -- {{product.price}}</h4>
+{{/each}}
+<hr>
+<h3>TOTAL: $ {{shoppingCart.currentTotal}}</h3>

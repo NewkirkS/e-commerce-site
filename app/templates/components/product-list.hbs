@@ -1,0 +1,12 @@
+<h1>{{model.name}}</h1>
+
+{{#each sortedProducts as |product|}}
+  <div class="product-tile">
+    {{#link-to "product" product}}
+      <h2>{{product.gamename}}</h2>
+      <img src={{product.image}} alt={{product.gamename}} />
+      <p>{{excerpt product.description}}</p>
+    {{/link-to}}
+  </div>
+  <hr>
+{{/each}}

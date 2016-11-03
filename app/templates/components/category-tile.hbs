@@ -1,11 +1,5 @@
 {{#each categories as |category|}}
   <div class="category-tile">
-    <h2 {{action "showCategoryProduct" on="click"}}>{{category.name}}</h2>
-    {{#each category.products as |product|}}
-      {{!-- {{#link-to 'product' product}} --}}
-        <h4>{{product.gamename}}</h4>
-        <img src={{product.image}} alt={{product.gamename}} />
-      {{!-- {{/link-to}} --}}
-    {{/each}}
+  {{#link-to "category" category}}<h2 class="category-headers">{{category.name}}</h2>{{/link-to}}
   </div>
 {{/each}}
